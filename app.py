@@ -6,9 +6,9 @@ app = Flask(__name__)
 def inicio():
     return redirect('/registro')
 
-@app.route('/registro')
+@app.route('/registro', methods=['GET', 'POST'])
 def registro():
-    return render_template('registro.html')
+    return redirect('/lista')
 
 @app.route('/lista')
 def lista():
