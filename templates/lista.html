@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Registros</title>
+</head>
+<style>
+    body {
+        background-color: pink;
+    }
+    table {
+        background-color: rgb(83, 0, 14);
+        color: white;
+        margin: 0 auto;
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid rgb(4, 0, 0);
+        padding: 8px;
+    }
+    td {
+        text-align: center;
+        color: white;
+        background-color: rgb(158, 12, 36);
+    }
+    h1 {
+        text-align: center;
+        color: white;
+        background-color:rgb(83, 0, 14);
+    }
+</style>
+<body>
+    <h1>Lista de Registros</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registro in registros %}
+                <tr>
+                    <td>{{ registro.nombre }}</td>
+                    <td>{{ registro.apellido }}</td>
+                    <td>{{ registro.edad }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
