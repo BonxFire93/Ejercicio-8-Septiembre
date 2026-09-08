@@ -2,13 +2,13 @@ from flask import Flask, render_template, redirect, request #type: ignore
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def inicio():
     return redirect('/registro')
 
 @app.route('/registro', methods=['GET', 'POST'])
 def registro():
-    return redirect('/lista')
+    return render_template('registro.html')
 
 @app.route('/lista')
 def lista():
